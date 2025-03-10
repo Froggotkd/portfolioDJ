@@ -1,5 +1,5 @@
 "use client"; 
-import { FaReact, FaGithub, FaLinkedin, FaNodeJs, FaDatabase, FaPython, FaHtml5, FaCss3, FaJs, FaJava } from "react-icons/fa";
+import { FaReact, FaGithub, FaLinkedin, FaNodeJs, FaDatabase, FaPython, FaHtml5, FaCss3, FaJs, FaJava, FaGitAlt  } from "react-icons/fa";
 import { HiAcademicCap } from "react-icons/hi";
 import { FaBriefcase, FaPlay  } from "react-icons/fa6";
 import { TiHome } from "react-icons/ti";
@@ -7,15 +7,14 @@ import { DiCode  } from "react-icons/di";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiAstro, SiTailwindcss } from "react-icons/si";
 
-
-
-
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const skills = [
   { name: "Astro", category:"FrontEnd", icon:<SiAstro size={40} className="text-neutral-50" />},
   { name: "CSS3", category: "FrontEnd", icon: <FaCss3 size={40} className="text-blue-500" /> },
+  { name: "Git", category: "Other", icon: <FaGitAlt  size={40} className="text-orange-500" /> },
   { name: "HTML5", category: "FrontEnd", icon: <FaHtml5 size={40} className="text-orange-500" /> },
   { name: "Java", category: "BackEnd", icon: <FaJava size={40} className="text-red-400" /> },
   { name: "JavaScript", category: "FrontEnd", icon: <FaJs size={40} className="text-yellow-300" /> },
@@ -28,13 +27,21 @@ const skills = [
 ];
 
 export default function Home() {
+  
+
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const filteredSkills = selectedCategory === "All"
     ? skills
     : skills.filter(skill => skill.category === selectedCategory);
 
-  return (
+    useEffect(() =>{
+      AOS.init({duration:1200})
+    })
+  
+
+  
+    return (
       <div className="flex min-h-screen bg-black text-white">
         {/* Sidebar */}
         <aside className="w-16 bg-[#121212] flex flex-col items-center py-6 space-y-1 h-screen rounded-md my-1  ml-3 fixed top-0 left-0">
@@ -66,7 +73,7 @@ export default function Home() {
         <main className="flex-1 p-6 ml-18">
           <div className="bg-gradient-to-t from-[#316B31] to-black p-6 rounded-lg flex items-center space-x-6 [filter:drop-shadow(0_0_3px_rgba(34,197,94,0.1))_drop-shadow(0_0_20px_rgba(34,197,94,0.2))]">
             <div className="rounded-full p-2">
-              <img src="https://cdn3d.iconscout.com/3d/premium/thumb/man-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--men-people-male-pack-avatars-icons-5187871.png?f=webp" alt="Avatar" className="w-69 h-60 " />
+              <img src="https://cdn3d.iconscout.com/3d/premium/thumb/man-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--men-people-male-pack-avatars-icons-5187871.png?f=webp" alt="Avatar" className="w-51 h-45 " />
             </div>
             <div>
               <p className="text-gray-300 p-2">📌 Quito, Ecuador</p>
@@ -83,14 +90,14 @@ export default function Home() {
   
             {/* Filter Tabs */}
              <div className="flex space-x-3 mt-3">
-              {["All", "FrontEnd", "BackEnd"].map(category => (
+              {["All", "FrontEnd", "BackEnd", "Other"].map(category => (
                 <button 
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full ${
                     selectedCategory === category 
-                      ? "bg-gray-600 text-white" 
-                      : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                      ? "bg-[#EFEFEF] text-[#2A2A2A]" 
+                      : "bg-[#2A2A2A] text-gray-300 hover:bg-gray-700"
                   }`}
                 >
                   {category}
@@ -99,9 +106,9 @@ export default function Home() {
             </div>
 
             {/* Skills Grid */}
-            <div className="grid grid-cols-3 gap-4 mt-6">
+            <div className="grid grid-cols-3 gap-4 mt-6" >
               {filteredSkills.map((skill, index) => (
-                <div key={index} className="bg-gray-900 p-4 flex items-center justify-between rounded-lg">
+                <div key={index} className="bg-[#2A2A2A] p-7 flex items-center justify-between rounded-lg" data-aos="fade-up">
                   <div className="flex items-center space-x-4">
                     {skill.icon}
                     <span className="text-lg font-medium text-white">{skill.name}</span>
@@ -117,3 +124,5 @@ export default function Home() {
       </div>
   )
 }
+
+

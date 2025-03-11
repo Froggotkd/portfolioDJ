@@ -26,7 +26,7 @@ type SkillPanelType = {
   icon: ReactNode ;
   playingSince: string;
   xpLevel: number;
-  projects: { name: string; url: string }[];
+  projects: { name: string; url: string, cover: string }[];
 };
 
 const skillPanel: SkillPanelType[] = [
@@ -39,7 +39,7 @@ const skillPanel: SkillPanelType[] = [
     icon:<SiAstro size={40} className="text-neutral-50" />,
     playingSince: "2025",
     xpLevel: 50,
-    projects: [{ name: "Portfolio", url: "uu" }],
+    projects: [{ name: "Portfolio", url: "uu", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" }],
   },
   {
     image:"https://blogandweb.com/wp-content/uploads/2010/02/css3-500x281.png",
@@ -50,7 +50,7 @@ const skillPanel: SkillPanelType[] = [
     icon:<FaCss3 size={40} className="text-blue-500" />,
     playingSince: "2023",
     xpLevel: 80,
-    projects: [{ name: "Portfolio", url: "uu" }],
+    projects: [{ name: "Portfolio", url: "uu", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" }],
   },
   {
     image:"https://www.godaddy.com/resources/latam/wp-content/uploads/programacionc.webp",
@@ -61,7 +61,7 @@ const skillPanel: SkillPanelType[] = [
     icon:<TbBrandCpp size={40} className="text-blue-500" />,
     playingSince: "2022",
     xpLevel: 80,
-    projects: [{ name: "Portfolio", url: "uu" }],
+    projects: [{ name: "Portfolio", url: "uu", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" }],
   },
   {
     image:"https://media.licdn.com/dms/image/v2/D4D12AQFPEOmOOcwwAg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1706896285400?e=2147483647&v=beta&t=NvySqjCinqHUjKyQ1iILjE8-x57zaVHqHlrNIMBTL0c",
@@ -72,7 +72,7 @@ const skillPanel: SkillPanelType[] = [
     icon:<FaGitAlt  size={40} className="text-orange-500" />,
     playingSince: "2022",
     xpLevel: 80,
-    projects: [{ name: "Portfolio", url: "uu" }],
+    projects: [{ name: "Portfolio", url: "uu", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" }],
   },
   {
     image:"https://phoenixnap.com/glossary/wp-content/uploads/2023/04/what-is-html.jpg",
@@ -83,7 +83,7 @@ const skillPanel: SkillPanelType[] = [
     icon:<FaHtml5 size={40} className="text-orange-500" />,
     playingSince: "2022",
     xpLevel: 80,
-    projects: [{ name: "Portfolio", url: "uu" }],
+    projects: [{ name: "Portfolio", url: "uu", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" }],
   },
   {
     image:"https://www.orientsoftware.com/Themes/Content/Images/blog/2024-05-16/oop-language-java.webp",
@@ -94,7 +94,7 @@ const skillPanel: SkillPanelType[] = [
     icon:<FaJava size={40} className="text-red-400" />,
     playingSince: "2022",
     xpLevel: 90,
-    projects: [{ name: "Portfolio", url: "uu" }],
+    projects: [{ name: "Portfolio", url: "uu", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" },{ name: "aaa", url: "uu", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" },{ name: "pROJECTO 3", url: "uu", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" }],
   },
   {
     image:"https://binarapps.com/wp-content/uploads/2021/02/2021-01-11-CG-Grudzien%CC%81_8.What-is-a-JavaScript-framework-Which-one-is-the-best-.png",
@@ -105,8 +105,7 @@ const skillPanel: SkillPanelType[] = [
     icon:<FaJs size={40} className="text-yellow-300" />,
     playingSince: "2023",
     xpLevel: 60,
-    projects: [{ name: "Portfolio", url: "uu" }],
-  },
+    projects: [{ name: "Portfolio", url: "uu", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" }],  },
   {
     image:"https://media.licdn.com/dms/image/v2/D4D12AQGOVSednILAUQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1694616033281?e=2147483647&v=beta&t=l7Rd4WLlaOg1fnWKyuJMdRROYIvM-8tt8So1JYW4CJQ",
     color:"#0a1c38",
@@ -116,8 +115,7 @@ const skillPanel: SkillPanelType[] = [
     icon:<DiMysql  size={40} className="text-blue-500" />,
     playingSince: "2024",
     xpLevel: 60,
-    projects: [{ name: "Portfolio", url: "uu" }],
-  },
+    projects: [{ name: "Portfolio", url: "uu", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" }],  },
   {
     image:"https://creativemansion.com.ng/wp-content/uploads/2022/10/The-Node.js-Architecture.-Hello-everyone.-Hope-you-are-doing%E2%80%A6-by-Ad.png",
     color:"#062403",
@@ -127,8 +125,7 @@ const skillPanel: SkillPanelType[] = [
     icon:<FaNodeJs size={24} className="text-green-500" />,
     playingSince: "2023",
     xpLevel: 65,
-    projects: [{ name: "Portfolio", url: "uu" }],
-  },
+    projects: [{ name: "Portfolio", url: "uu", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" }],  },
   {
     image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm-z3E98u1Z5x6iJd5KQ9Q3Gnzj_cJaUCBzg&s",
     color:"#344004",
@@ -138,8 +135,7 @@ const skillPanel: SkillPanelType[] = [
     icon:<FaPython size={40} className="text-yellow-400" />,
     playingSince: "2023",
     xpLevel: 75,
-    projects: [{ name: "Portfolio", url: "uu" }],
-  },
+    projects: [{ name: "Portfolio", url: "uu", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" }],  },
   {
     image:"https://kinsta.com/es/wp-content/uploads/sites/8/2022/04/que-es-postgresql.png",
     color:"#0a1c38",
@@ -149,8 +145,7 @@ const skillPanel: SkillPanelType[] = [
     icon:<BiLogoPostgresql size={40} className="text-blue-500" />,
     playingSince: "2023",
     xpLevel: 80,
-    projects: [{ name: "Portfolio", url: "uu" }],
-  },
+    projects: [{ name: "Portfolio", url: "uu", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" }],  },
   {
     image:"https://i0.wp.com/getmimo.wpcomstaging.com/wp-content/uploads/2024/06/react_header.png?fit=1920%2C1080&ssl=1",
     color:"#0a1c38",
@@ -160,8 +155,7 @@ const skillPanel: SkillPanelType[] = [
     icon: <FaReact size={40} className="text-blue-400" />,
     playingSince: "2023",
     xpLevel: 65,
-    projects: [{ name: "Portfolio", url: "uu" }],
-  },
+    projects: [{ name: "Portfolio", url: "uu", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" }],  },
   {
     image:"https://webdesignerdepot-wp.s3.us-east-2.amazonaws.com/2021/09/08123810/featured_tailwind_2022-09-16-143652_okfu.jpeg",
     color:"#187280",
@@ -171,8 +165,7 @@ const skillPanel: SkillPanelType[] = [
     icon: <SiTailwindcss size={40} className="text-cyan-400" />,
     playingSince: "2025",
     xpLevel: 25,
-    projects: [{ name: "Portfolio", url: "uu" }],
-  },
+    projects: [{ name: "Portfolio", url: "uu", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" }],  },
   
 ];
 
@@ -286,7 +279,7 @@ export default function Home() {
                     data-aos="fade-up"
                     onClick={() => openPanel(skill)}
                     onMouseEnter={() => setColorGradient(skill.color)}
-                    onMouseLeave={() => setColorGradient("rgba(34, 34, 34, 0.8)")}>
+                    onMouseLeave={() => setColorGradient("#222222")}>
                       
                     <div className="flex items-center space-x-4">
                       {skill.icon}
@@ -298,24 +291,28 @@ export default function Home() {
                   </div>
                 ))}
 
-                <div className={`border-none fixed top-0 right-0 h-full w-80 bg-[#121212] text-white shadow-2xl transition-transform duration-300 ${isPanelOpen ? "translate-x-0" : "translate-x-full"}`}>
+                <div
+                  className={` border-none fixed top-0 right-0 h-full w-80 my-3 rounded-sm bg-[#121212] text-white shadow-2xl transition-transform duration-300 ${
+                    isPanelOpen ? "translate-x-0" : "translate-x-full"
+                  }`}
+                >
+                  {/* Close Button */}
                   <button
-                    className="cursor-pointer absolute top-4 right-4 text-2xl text-gray-400 hover:text-white transition-colors"
+                    className="cursor-pointer absolute top-4 right-4 text-base text-gray-400 hover:text-white transition-colors"
                     onClick={closePanel}
                   >
                     ✖
                   </button>
-                  
+
                   {selectedSkill && (
-                    <div className="p-6 mt-12 text-center">
-                      
+                    <div className="no-scrollbar p-6 mt-12 h-[calc(100vh-4rem)] overflow-y-auto">
                       {/* Image */}
                       <div className="flex justify-center">
                         <div className="relative">
-                          <img 
-                            src={selectedSkill.image} 
+                          <img
+                            src={selectedSkill.image}
                             alt={selectedSkill.name}
-                            className="w-76 h-38 rounded-sm   shadow-lg"
+                            className="w-76 h-38 rounded-sm shadow-lg"
                           />
                           <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-[#121212] to-transparent"></div>
                         </div>
@@ -324,37 +321,57 @@ export default function Home() {
                       {/* Skill Title */}
                       <h2 className="text-2xl font-bold mt-4">{selectedSkill.name}</h2>
                       <p className="text-gray-400 text-sm mt-2">{selectedSkill.description}</p>
-                      <p className="mt-2 text-sm">Playing Since: <span className="text-green-400">{selectedSkill.playingSince}</span></p>
 
-                      {/* Experience Bar */}
-                      <div className="w-full bg-gray-700 h-2 rounded-full mt-4 overflow-hidden">
-                        <div
-                          className="bg-green-400 h-2 rounded-full transition-all duration-500"
-                          style={{ width: `${selectedSkill.xpLevel}%` }}
-                        ></div>
+                      {/* Experience Section */}
+                      <div className="bg-[#222222] p-2 mt-2 rounded-sm">
+                        <p className="text-sm">
+                          Playing Since: <span className="text-green-400">{selectedSkill.playingSince}</span>
+                        </p>
+
+                        {/* Experience Bar */}
+                        <div className="w-full bg-gray-700 h-2 rounded-full mt-4 overflow-hidden">
+                          <div
+                            className="bg-green-400 h-2 rounded-full transition-all duration-500"
+                            style={{ width: `${selectedSkill.xpLevel}%` }}
+                          ></div>
+                        </div>
                       </div>
 
                       {/* Projects Section */}
-                      <h3 className="mt-6 text-lg font-semibold text-left">Projects:</h3>
-                      <ul className="mt-2 space-y-2 text-left">
-                        {selectedSkill.projects.map((project) => (
-                          <li key={project.name} className="flex items-center space-x-2">
-                            <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                            <a
-                              href={project.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-blue-400 hover:underline"
-                            >
-                              {project.name}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
+                      <div className="bg-[#222222] mt-3 rounded-sm">
+                        <h3 className="text-lg font-semibold p-2 text-left">Related</h3>
+                        
+                        <div className="mt-2 overflow-x-auto whitespace-nowrap flex px-1 no-scrollbar">
+                          {selectedSkill.projects.map((project) => (
+                            <div key={project.name} className="flex flex-col items-center min-w-[100px]">
+                              <div className="relative group p-2 hover:bg-[#424242] mb-2 rounded-sm">
+                                <div className="relative">
+                                  <img src={project.cover} alt={project.name} className="w-18 h-18 rounded-sm mb-2 transition-opacity duration-300 group-hover:opacity-60" />
+                                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div className=" bg-opacity-10 p-2 rounded-full hover:bg-opacity-80">
+                                      <FaPlay size={18} className="text-white" />
+                                    </div>
+                                  </div>
+                                </div>
+
+                                {/* Project Name */}
+                                <a
+                                  href={project.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="font-semibold text-gray-100 text-sm text-center hover:underline w-full"
+                                >
+                                  {project.name}
+                                </a>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
                     </div>
                   )}
                 </div>
-
 
               </div>
             </section>

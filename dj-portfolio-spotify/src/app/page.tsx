@@ -1,9 +1,9 @@
 "use client"; 
-import { FaReact, FaGithub, FaLinkedin, FaNodeJs, FaDatabase, FaPython, FaHtml5, FaCss3, FaJs, FaJava, FaGitAlt  } from "react-icons/fa";
+import { FaReact, FaGithub, FaLinkedin, FaNodeJs, FaPython, FaHtml5, FaCss3, FaJs, FaJava, FaGitAlt  } from "react-icons/fa";
 import { HiAcademicCap } from "react-icons/hi";
 import { FaBriefcase, FaPlay  } from "react-icons/fa6";
 import { TiHome } from "react-icons/ti";
-import { DiCode  } from "react-icons/di";
+import { DiCode, DiMysql   } from "react-icons/di";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiAstro, SiTailwindcss } from "react-icons/si";
 import { TbBrandCpp } from "react-icons/tb";
@@ -18,6 +18,8 @@ import "aos/dist/aos.css";
 
 
 type SkillPanelType = {
+  image: string,
+  color: string;
   name: string;
   description: string
   category: string;
@@ -29,6 +31,8 @@ type SkillPanelType = {
 
 const skillPanel: SkillPanelType[] = [
   {
+    image:"https://media2.dev.to/dynamic/image/width=1280,height=720,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fntwbi1zq2vxsqbb3hkiy.png",
+    color:"#333232",
     name:"Astro",
     description: "FrontEnd Javascript framework, static web, SEO - efficent",
     category: "FrontEnd",
@@ -38,6 +42,8 @@ const skillPanel: SkillPanelType[] = [
     projects: [{ name: "Portfolio", url: "uu" }],
   },
   {
+    image:"https://blogandweb.com/wp-content/uploads/2010/02/css3-500x281.png",
+    color:"#0a1c38",
     name:"CSS 3",
     description:"Styles, layouts, and responsive designs for web pages.",
     category: "FrontEnd",
@@ -47,6 +53,8 @@ const skillPanel: SkillPanelType[] = [
     projects: [{ name: "Portfolio", url: "uu" }],
   },
   {
+    image:"https://www.godaddy.com/resources/latam/wp-content/uploads/programacionc.webp",
+    color:"#0a1c38",
     name:"C ++",
     description:"Low-level language with memory management for performance-critical applications.",
     category: "BackEnd",
@@ -56,6 +64,8 @@ const skillPanel: SkillPanelType[] = [
     projects: [{ name: "Portfolio", url: "uu" }],
   },
   {
+    image:"https://media.licdn.com/dms/image/v2/D4D12AQFPEOmOOcwwAg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1706896285400?e=2147483647&v=beta&t=NvySqjCinqHUjKyQ1iILjE8-x57zaVHqHlrNIMBTL0c",
+    color:"#40200b",
     name:"Git",
     description:"Version control system for tracking and managing code changes.",
     category: "Other",
@@ -65,6 +75,8 @@ const skillPanel: SkillPanelType[] = [
     projects: [{ name: "Portfolio", url: "uu" }],
   },
   {
+    image:"https://phoenixnap.com/glossary/wp-content/uploads/2023/04/what-is-html.jpg",
+    color:"#40200b",
     name:"HTML 5",
     description:"Markup language for structuring content on the web.",
     category: "FrontEnd",
@@ -74,6 +86,8 @@ const skillPanel: SkillPanelType[] = [
     projects: [{ name: "Portfolio", url: "uu" }],
   },
   {
+    image:"https://www.orientsoftware.com/Themes/Content/Images/blog/2024-05-16/oop-language-java.webp",
+    color:"#400406",
     name:"Java",
     description:"Object-oriented, platform-independent language for enterprise applications.",
     category: "BackEnd",
@@ -83,6 +97,8 @@ const skillPanel: SkillPanelType[] = [
     projects: [{ name: "Portfolio", url: "uu" }],
   },
   {
+    image:"https://binarapps.com/wp-content/uploads/2021/02/2021-01-11-CG-Grudzien%CC%81_8.What-is-a-JavaScript-framework-Which-one-is-the-best-.png",
+    color:"#665907",
     name:"JavaScript",
     description:"Client-side scripting for dynamic and interactive web functionality",
     category: "FrontEnd",
@@ -92,15 +108,19 @@ const skillPanel: SkillPanelType[] = [
     projects: [{ name: "Portfolio", url: "uu" }],
   },
   {
+    image:"https://media.licdn.com/dms/image/v2/D4D12AQGOVSednILAUQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1694616033281?e=2147483647&v=beta&t=l7Rd4WLlaOg1fnWKyuJMdRROYIvM-8tt8So1JYW4CJQ",
+    color:"#0a1c38",
     name:"MySQL",
     description:"Relational database management system using SQL for queries.",
     category: "BackEnd",
-    icon:<FaDatabase size={40} className="text-green-400" />,
+    icon:<DiMysql  size={40} className="text-blue-500" />,
     playingSince: "2024",
     xpLevel: 60,
     projects: [{ name: "Portfolio", url: "uu" }],
   },
   {
+    image:"https://creativemansion.com.ng/wp-content/uploads/2022/10/The-Node.js-Architecture.-Hello-everyone.-Hope-you-are-doing%E2%80%A6-by-Ad.png",
+    color:"#062403",
     name:"Node.js",
     description:"Runtime environment for server-side JavaScript execution.",
     category: "BackEnd",
@@ -110,6 +130,8 @@ const skillPanel: SkillPanelType[] = [
     projects: [{ name: "Portfolio", url: "uu" }],
   },
   {
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm-z3E98u1Z5x6iJd5KQ9Q3Gnzj_cJaUCBzg&s",
+    color:"#344004",
     name:"Python",
     description:"High-level, interpreted language for scripting and automation.",
     category: "BackEnd",
@@ -119,6 +141,8 @@ const skillPanel: SkillPanelType[] = [
     projects: [{ name: "Portfolio", url: "uu" }],
   },
   {
+    image:"https://kinsta.com/es/wp-content/uploads/sites/8/2022/04/que-es-postgresql.png",
+    color:"#0a1c38",
     name:"PostgreSQL",
     description:"Object-relational database with ACID compliance and extensibility.",
     category: "BackEnd",
@@ -128,6 +152,8 @@ const skillPanel: SkillPanelType[] = [
     projects: [{ name: "Portfolio", url: "uu" }],
   },
   {
+    image:"https://i0.wp.com/getmimo.wpcomstaging.com/wp-content/uploads/2024/06/react_header.png?fit=1920%2C1080&ssl=1",
+    color:"#0a1c38",
     name: "React",
     description:"JavaScript library for building component-based user interfaces.",
     category: "FrontEnd",
@@ -137,6 +163,8 @@ const skillPanel: SkillPanelType[] = [
     projects: [{ name: "Portfolio", url: "uu" }],
   },
   {
+    image:"https://webdesignerdepot-wp.s3.us-east-2.amazonaws.com/2021/09/08123810/featured_tailwind_2022-09-16-143652_okfu.jpeg",
+    color:"#187280",
     name: "Tailwind CSS",
     description:"Utility-first CSS framework for customizable, responsive designs.",
     category: "FrontEnd",
@@ -174,6 +202,8 @@ export default function Home() {
       setTimeout(() => setSelectedSkill(null), 300); 
     };
 
+    const[colorGradient, setColorGradient] = useState("#2a2a2a");
+
   
     return (
 
@@ -209,8 +239,15 @@ export default function Home() {
           </aside>
 
           {/* Main Content */}
-          <main className="flex-1 p-6 ml-18">
-            <div className={`bg-gradient-to-t from-[#316B31] to-black p-6 rounded-lg flex items-center space-x-6 [filter:drop-shadow(0_0_3px_rgba(34,197,94,0.1))_drop-shadow(0_0_20px_rgba(34,197,94,0.2))] ${isPanelOpen ? "w-197" : "w-auto"} `}>
+          <main 
+            className="flex-1 p-6 ml-18 transition-all duration-[4500ms] ease-in-out"
+            style={{ 
+              backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.9), ${colorGradient})`,
+              transition: 'background-image 4s ease-in-out'
+            }}
+            onMouseEnter={() => setColorGradient("rgba(34, 34, 34, 0.8)")} 
+          >
+            <div className={`bg-gradient-to-t from-[#316B31] to-[#121212] p-6 rounded-lg flex items-center space-x-6 [filter:drop-shadow(0_0_3px_rgba(34,197,94,0.1))_drop-shadow(0_0_20px_rgba(34,197,94,0.2))] ${isPanelOpen ? "w-197" : "w-auto"} `}>
               <div className="rounded-full p-2">
                 <img src="https://cdn3d.iconscout.com/3d/premium/thumb/man-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--men-people-male-pack-avatars-icons-5187871.png?f=webp" alt="Avatar" className={`${isPanelOpen ? "w-28 h-20" : "w-51 h-45"}`} />
               </div>
@@ -233,9 +270,9 @@ export default function Home() {
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-full ${selectedCategory === category
+                    className={`cursor-pointer px-4 py-2 rounded-full ${selectedCategory === category
                         ? "bg-[#EFEFEF] text-[#2A2A2A]"
-                        : "bg-[#2A2A2A] text-gray-300 hover:bg-gray-700"}`}
+                        : "bg-[#2A2A2A] text-gray-300 hover:bg-[#424242]"}`}
                   >
                     {category}
                   </button>
@@ -243,51 +280,66 @@ export default function Home() {
               </div>
 
               {/* Skills Grid */}
-              <div className={`grid gap-4 mt-6 ${isPanelOpen ? "grid-cols-3 w-197" : "grid-cols-3"}`}>
+              <div className={`grid gap-4 mt-7 ${isPanelOpen ? "grid-cols-3 w-197" : "grid-cols-3"}`}>
                 {filteredSkills.map((skill, index) => (
-                  <div key={index} className=" mb-1 group bg-[#2A2A2A] p-7 flex items-center justify-between rounded-lg"
-                    data-aos="fade-up">
+                  <div key={index} className={`cursor-pointer mb-1 h-23 group bg-[#2A2A2A] p-4 flex items-center justify-between rounded-lg hover:bg-[#424242]`}
+                    data-aos="fade-up"
+                    onClick={() => openPanel(skill)}
+                    onMouseEnter={() => setColorGradient(skill.color)}
+                    onMouseLeave={() => setColorGradient("rgba(34, 34, 34, 0.8)")}>
+                      
                     <div className="flex items-center space-x-4">
                       {skill.icon}
                       <span className="text-lg font-medium text-white">{skill.name}</span>
                     </div>
-                    <div className="bg-[#1ED760] p-2 rounded-full cursor-pointer hover:bg-green-400 transition opacity-0 group-hover:opacity-100">
-                      <FaPlay size={20} className="text-black" onClick={() => openPanel(skill)} />
+                    <div className="bg-[#1ED760] p-2 rounded-full cursor-pointer hover:bg-green-400 transition opacity-0 group-hover:opacity-100 hover:scale-110 hover:drop-shadow-2xl">
+                      <FaPlay size={20} className="text-black hover:bg-[#39dd73] "  />
                     </div>
                   </div>
                 ))}
 
-                <div className={`border-8 border-transparent fixed top-0 right-0 h-full w-80 bg-[#121212] text-white shadow-lg transition-transform duration-300 ${isPanelOpen ? "translate-x-0" : "translate-x-full"}`}>
+                <div className={`border-none fixed top-0 right-0 h-full w-80 bg-[#121212] text-white shadow-2xl transition-transform duration-300 ${isPanelOpen ? "translate-x-0" : "translate-x-full"}`}>
                   <button
-                    className="absolute top-4 right-4 text-2xl"
+                    className="cursor-pointer absolute top-4 right-4 text-2xl text-gray-400 hover:text-white transition-colors"
                     onClick={closePanel}
                   >
                     ✖
                   </button>
+                  
                   {selectedSkill && (
-                    <div className="p-6 mt-10">
-                      <div className="place-items-center">
-                        {selectedSkill.icon}
+                    <div className="p-6 mt-12 text-center">
+                      
+                      {/* Image */}
+                      <div className="flex justify-center">
+                        <div className="relative">
+                          <img 
+                            src={selectedSkill.image} 
+                            alt={selectedSkill.name}
+                            className="w-76 h-38 rounded-sm   shadow-lg"
+                          />
+                          <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                        </div>
                       </div>
-                      <h2 className="text-2xl font-bold text-center mt-4">
-                        {selectedSkill.name}
-                      </h2>
-                      <p className="text-sm">{selectedSkill.description}</p>
-                      <p className="mt-2">Playing Since: {selectedSkill.playingSince}</p>
+
+                      {/* Skill Title */}
+                      <h2 className="text-2xl font-bold mt-4">{selectedSkill.name}</h2>
+                      <p className="text-gray-400 text-sm mt-2">{selectedSkill.description}</p>
+                      <p className="mt-2 text-sm">Playing Since: <span className="text-green-400">{selectedSkill.playingSince}</span></p>
 
                       {/* Experience Bar */}
-                      <div className="w-full bg-gray-700 h-2 rounded-full mt-4">
+                      <div className="w-full bg-gray-700 h-2 rounded-full mt-4 overflow-hidden">
                         <div
-                          className="bg-green-400 h-2 rounded-full"
+                          className="bg-green-400 h-2 rounded-full transition-all duration-500"
                           style={{ width: `${selectedSkill.xpLevel}%` }}
                         ></div>
                       </div>
 
-                      {/* Projects */}
-                      <h3 className="mt-6 text-lg font-semibold">Projects:</h3>
-                      <ul className="mt-2">
+                      {/* Projects Section */}
+                      <h3 className="mt-6 text-lg font-semibold text-left">Projects:</h3>
+                      <ul className="mt-2 space-y-2 text-left">
                         {selectedSkill.projects.map((project) => (
-                          <li key={project.name} className="mt-1">
+                          <li key={project.name} className="flex items-center space-x-2">
+                            <span className="w-2 h-2 bg-green-400 rounded-full"></span>
                             <a
                               href={project.url}
                               target="_blank"
@@ -302,6 +354,7 @@ export default function Home() {
                     </div>
                   )}
                 </div>
+
 
               </div>
             </section>

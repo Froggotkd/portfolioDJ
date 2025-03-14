@@ -170,7 +170,9 @@ const skillPanel: SkillPanelType[] = [
 ];
 
 
+
 export default function Home() {
+
     const router = useRouter();
 
     const [selectedCategory, setSelectedCategory] = useState("All");
@@ -180,7 +182,7 @@ export default function Home() {
     : skillPanel.filter(skillPanel => skillPanel.category === selectedCategory);
 
     useEffect(() =>{
-      AOS.init({duration:1200})
+      AOS.init({duration:1200});
     })
   
     const [selectedSkill, setSelectedSkill] = useState<SkillPanelType | null>(null);
@@ -273,7 +275,7 @@ export default function Home() {
               </div>
 
               {/* Skills Grid */}
-              <div className={`grid gap-4 mt-7 ${isPanelOpen ? "grid-cols-3 w-197" : "grid-cols-3"}`}>
+              <div className={`grid gap-4 mt-7 ${isPanelOpen ? "grid-cols-3 w-210" : "grid-cols-3"}`}>
                 {filteredSkills.map((skill, index) => (
                   <div key={index} className={`cursor-pointer mb-1 h-23 group bg-[#2A2A2A] p-4 flex items-center justify-between rounded-lg hover:bg-[#424242]`}
                     data-aos="fade-up"
@@ -318,7 +320,6 @@ export default function Home() {
                         </div>
                       </div>
 
-                      {/* Skill Title */}
                       <h2 className="text-2xl font-bold mt-4">{selectedSkill.name}</h2>
                       <p className="text-gray-400 text-sm mt-2">{selectedSkill.description}</p>
 
@@ -344,7 +345,7 @@ export default function Home() {
                         <div className="mt-2 overflow-x-auto whitespace-nowrap flex px-1 no-scrollbar">
                           {selectedSkill.projects.map((project) => (
                             <div key={project.name} className="flex flex-col items-center min-w-[100px]">
-                              <div className="relative group p-2 hover:bg-[#424242] mb-2 rounded-sm">
+                              <div className="cursor-pointer relative group p-2 hover:bg-[#424242] mb-2 rounded-sm">
                                 <div className="relative">
                                   <img src={project.cover} alt={project.name} className="w-18 h-18 rounded-sm mb-2 transition-opacity duration-300 group-hover:opacity-60" />
                                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">

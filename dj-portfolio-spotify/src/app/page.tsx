@@ -124,7 +124,7 @@ const skillPanel: SkillPanelType[] = [
     category: "BackEnd",
     icon:<FaNodeJs size={24} className="text-green-500" />,
     playingSince: "2023",
-    xpLevel: 65,
+    xpLevel: 35,
     projects: [{ name: "Portfolio", url: "uu", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" }],  },
   {
     image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm-z3E98u1Z5x6iJd5KQ9Q3Gnzj_cJaUCBzg&s",
@@ -165,7 +165,7 @@ const skillPanel: SkillPanelType[] = [
     icon: <SiTailwindcss size={40} className="text-cyan-400" />,
     playingSince: "2025",
     xpLevel: 25,
-    projects: [{ name: "Portfolio", url: "uu", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" }],  },
+    projects: [{ name: "Portfolio", url: "/projects", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" }],  },
   
 ];
 
@@ -275,9 +275,9 @@ export default function Home() {
               </div>
 
               {/* Skills Grid */}
-              <div className={`grid gap-4 mt-7 ${isPanelOpen ? "grid-cols-3 w-210" : "grid-cols-3"}`}>
+              <div className={`grid gap-4 mt-5 ${isPanelOpen ? "grid-cols-3 w-210" : "grid-cols-3"}`}>
                 {filteredSkills.map((skill, index) => (
-                  <div key={index} className={`cursor-pointer mb-1 h-23 group bg-[#2A2A2A] p-4 flex items-center justify-between rounded-lg hover:bg-[#424242]`}
+                  <div key={index} className={`cursor-pointer mb-1 h-20 group bg-[#2A2A2A] p-2 flex items-center justify-between rounded-lg hover:bg-[#424242]`}
                     data-aos="fade-up"
                     onClick={() => openPanel(skill)}
                     onMouseEnter={() => setColorGradient(skill.color)}
@@ -376,6 +376,9 @@ export default function Home() {
 
               </div>
             </section>
+            <div>
+              <p className="text-black">asda</p>
+            </div>
           </main>
         </div>
   )

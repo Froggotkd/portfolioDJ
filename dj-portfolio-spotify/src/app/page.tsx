@@ -7,10 +7,11 @@ import { DiCode, DiMysql   } from "react-icons/di";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiAstro, SiTailwindcss } from "react-icons/si";
 import { TbBrandCpp } from "react-icons/tb";
+import { PiCatFill } from "react-icons/pi";
+
 
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 
 import { ReactNode, useEffect, useState } from "react";
 import AOS from "aos";
@@ -39,7 +40,7 @@ const skillPanel: SkillPanelType[] = [
     icon:<SiAstro size={40} className="text-neutral-50" />,
     playingSince: "2025",
     xpLevel: 50,
-    projects: [{ name: "Portfolio", url: "uu", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" }],
+    projects: [{ name: "Portfolio", url: "uuu", cover:"https://www.shutterstock.com/image-photo/awesome-pic-natureza-600nw-2408133899.jpg" }],
   },
   {
     image:"https://blogandweb.com/wp-content/uploads/2010/02/css3-500x281.png",
@@ -175,6 +176,15 @@ export default function Home() {
 
     const router = useRouter();
 
+    let selectedProject = "";
+
+    const handleProjectClick = (project: string) => {
+      selectedProject = project;
+      //router.push("/projects")
+      console.log(selectedProject)
+      router.push(`/projects?name=${encodeURIComponent(project)}`);
+    };
+
     const [selectedCategory, setSelectedCategory] = useState("All");
 
   const filteredSkills = selectedCategory === "All"
@@ -220,6 +230,9 @@ export default function Home() {
               <div className="bg-[#2A2A2A] w-10 h-10 flex items-center justify-center rounded-md">
                 <HiAcademicCap size={29} className="text-gray-400 hover:text-white cursor-pointer" />
               </div>
+              <div className="bg-[#2A2A2A] w-10 h-10 flex items-center justify-center rounded-md">
+                <PiCatFill size={29} className="text-gray-400 hover:text-white cursor-pointer" />
+              </div>
             </div>
             <div className="flex flex-col items-center space-y-2">
               <div className="bg-[#2A2A2A] w-10 h-10 flex items-center justify-center rounded-md">
@@ -250,7 +263,7 @@ export default function Home() {
                 <p className="text-gray-300 p-2">📌 Quito, Ecuador</p>
                 <h2 className="text-3xl font-bold p-2">DANIEL JARAMILLO</h2>
                 <p className="text-gray-400 mt-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Software Engineering student at EPN in Quito, web and app developer, UI/UX focused. Teacher and always learning. 21 years old.
                 </p>
               </div>
             </div>
@@ -345,7 +358,7 @@ export default function Home() {
                         <div className="mt-2 overflow-x-auto whitespace-nowrap flex px-1 no-scrollbar">
                           {selectedSkill.projects.map((project) => (
                             <div key={project.name} className="flex flex-col items-center min-w-[100px]">
-                              <div className="cursor-pointer relative group p-2 hover:bg-[#424242] mb-2 rounded-sm">
+                              <div className="cursor-pointer relative group p-2 hover:bg-[#424242] mb-2 rounded-sm" onClick={()=> handleProjectClick(project.name)}>
                                 <div className="relative">
                                   <img src={project.cover} alt={project.name} className="w-18 h-18 rounded-sm mb-2 transition-opacity duration-300 group-hover:opacity-60" />
                                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -357,7 +370,7 @@ export default function Home() {
 
                                 {/* Project Name */}
                                 <a
-                                  href={project.url}
+                                  href={"/projects"}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="font-semibold text-gray-100 text-sm text-center hover:underline w-full"
